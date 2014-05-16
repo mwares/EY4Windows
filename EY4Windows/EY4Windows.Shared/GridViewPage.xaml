@@ -20,7 +20,7 @@
                         <Image Source="{Binding Image}" Height="60" Width="60" Stretch="UniformToFill" Margin="0,0,5,0"/>
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="{Binding Name}" FontSize="14.667" FontFamily="Segoe UI" Width="150" TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding Type}" FontSize="12" FontFamily="Segoe UI" Width="150" TextWrapping="Wrap"/>
+                           <!-- <TextBlock Text="{Binding Type}" FontSize="12" FontFamily="Segoe UI" Width="150" TextWrapping="Wrap"/>-->
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>

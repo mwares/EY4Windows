@@ -24,6 +24,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)GridViewPage.xaml.cs">
       <DependentUpon>GridViewPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Observation.xaml.cs">
+      <DependentUpon>Observation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Sample-Utils\SuspensionManager.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -39,9 +42,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Observation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Sample-Utils\SampleTemplateStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\60Banana.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\60Lemon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\60Mint.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\60Orange.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\60Strawberry.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\60Vanilla.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\chloe.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\lillie.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\mediumtile-sdk.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\microsoft-sdk.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Paula.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\smalltile-Phone-sdk.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\smalltile-Windows-sdk.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\smiley.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\splash-Phone-sdk.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\splash-Windows-sdk.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\squaretile-sdk.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\storelogo-sdk.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\tile-sdk.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\windows-sdk.png" />
   </ItemGroup>
 </Project>

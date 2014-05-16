@@ -43,13 +43,49 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="250" />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+
+			    <Rectangle Fill="SteelBlue" Grid.RowSpan="3" />
+				<StackPanel Grid.Column="0" Grid.RowSpan="3">
+					<TextBlock 
+						Margin="20"
+						Text="Playlists"
+						Style="{StaticResource SubheaderTextBlockStyle}" />
+					<ListView
+						Margin="20,0,0,0"
+						SelectionMode="Single"
+						SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}"
+						ItemsSource="{Binding Playlists}">
+						<ItemsControl.ItemTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Horizontal">
+									<Border Height="25" Width="25" Background="White" />
+									<TextBlock 
+										Margin="10,0,0,0" LineHeight="0" FontWeight="Light"
+										Text="{Binding Title, FallbackValue='Sample Playlist Title'}"
+										VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}" />
+								</StackPanel>
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+						<x:String>Test</x:String>
+						<x:String>Test</x:String>
+						<x:String>Test</x:String>
+						<x:String>Test</x:String>
+						<x:String>Test</x:String>
+						<x:String>Test</x:String>
+						<x:String>Test</x:String>
+					</ListView>
+				</StackPanel>
 
             <!-- Header -->
-            <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
                 <Image x:Name="WindowsLogo" Stretch="None" Source="Assets/windows-sdk.png" AutomationProperties.Name="Windows Logo" HorizontalAlignment="Left" Grid.Column="0"/>
                 <TextBlock  Text="Softwares Solutions" VerticalAlignment="Bottom" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Grid.Column="1"/>
             </StackPanel>
-            <ScrollViewer x:Name="MainScrollViewer" Grid.Row="1" ZoomMode="Disabled" IsTabStop="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Padding="0,0,0,20" >
+            <ScrollViewer x:Name="MainScrollViewer" Grid.Row="1"  Grid.Column="1" ZoomMode="Disabled" IsTabStop="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Padding="0,0,0,20" Margin="5,0" >
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -104,7 +140,7 @@
             </ScrollViewer>
 
             <!-- Footer -->
-            <Grid x:Name="Footer"  Grid.Row="3" Margin="0,10,0,10" VerticalAlignment="Bottom" >
+            <Grid x:Name="Footer"  Grid.Row="3"  Grid.Column="1" Margin="0,10,0,10" VerticalAlignment="Bottom" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>

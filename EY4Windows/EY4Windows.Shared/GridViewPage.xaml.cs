@@ -80,20 +80,20 @@ namespace EY4Windows
         private Child GenerateItem()
         {
 
-            int type = (int)Math.Floor((double)random.Next(1, 5));
+            int type = (int)Math.Floor((double)random.Next(1, 6));
 
             switch (type)
             {
                 case 1:
-                    return new Child { Name = "Mark", Type = "Low-fat Frozen Yogurt", Image = "Assets/60Banana.png" };
+                    return new Child { Name = "Mark Wares", Image = "Assets/60Banana.png" };
                 case 2:
-                    return new Child { Name = "Paula", Type = "Sorbet", Image = "Assets/60Lemon.png" };
+                    return new Child { Name = "Paula Wares", Image = "Assets/paula.png" };
                 case 3:
-                    return new Child { Name = "Dylan", Type = "Gelato", Image = "Assets/60Mint.png" };
+                    return new Child { Name = "Dylan Wares", Image = "Assets/60Mint.png" };
                 case 4:
-                    return new Child { Name = "Chloe", Type = "Sorbet", Image = "Assets/60Orange.png" };
+                    return new Child { Name = "Chloe Wares", Image = "Assets/chloe.png" };
                 default:
-                    return new Child { Name = "Lillie", Type = "Ice Cream", Image = "Assets/60Vanilla.png" };
+                    return new Child { Name = "Lillie Wares", Image = "Assets/lillie.png" };
                 //default:
                  //   return new Child { Name = "Succulent Strawberry", Type = "Sorbet", Image = "Assets/60Strawberry.png" };
             }
