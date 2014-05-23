@@ -11,9 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EY4Windows.Windows", "EY4Wi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EY4Windows.WindowsPhone", "EY4Windows\EY4Windows.WindowsPhone\EY4Windows.WindowsPhone.csproj", "{72D8A573-0151-4F54-9CAF-E8C40F0168F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYData", "EYData\EYData.csproj", "{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		EY4Windows\EY4Windows.Shared\EY4Windows.Shared.projitems*{72d8a573-0151-4f54-9caf-e8c40f0168f1}*SharedItemsImports = 4
 		EY4Windows\EY4Windows.Shared\EY4Windows.Shared.projitems*{e02ad5e4-dbff-40da-9c42-24ad3d364eeb}*SharedItemsImports = 13
 		EY4Windows\EY4Windows.Shared\EY4Windows.Shared.projitems*{8ca05560-67b4-4821-a79e-b9aa7ddbbda5}*SharedItemsImports = 4
 	EndGlobalSection
@@ -72,6 +73,16 @@ Global
 		{72D8A573-0151-4F54-9CAF-E8C40F0168F1}.Release|x86.ActiveCfg = Release|x86
 		{72D8A573-0151-4F54-9CAF-E8C40F0168F1}.Release|x86.Build.0 = Release|x86
 		{72D8A573-0151-4F54-9CAF-E8C40F0168F1}.Release|x86.Deploy.0 = Release|x86
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Release|ARM.ActiveCfg = Release|Any CPU
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Release|x64.ActiveCfg = Release|Any CPU
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,5 +91,6 @@ Global
 		{E02AD5E4-DBFF-40DA-9C42-24AD3D364EEB} = {F136BB05-429E-4B1E-A950-A6807D482012}
 		{8CA05560-67B4-4821-A79E-B9AA7DDBBDA5} = {F136BB05-429E-4B1E-A950-A6807D482012}
 		{72D8A573-0151-4F54-9CAF-E8C40F0168F1} = {F136BB05-429E-4B1E-A950-A6807D482012}
+		{902C8A9D-ED1E-4B75-BEDF-1C3EA83B1B87} = {F136BB05-429E-4B1E-A950-A6807D482012}
 	EndGlobalSection
 EndGlobal

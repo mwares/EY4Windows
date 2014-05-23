@@ -49,6 +49,7 @@ namespace EY4Windows
             // Populate the sample title from the constant in the Constants.cs file.
             SetFeatureName(FEATURE_NAME);
             Scenarios.SelectionChanged += Scenarios_SelectionChanged;
+            
             SizeChanged += MainPage_SizeChanged;
         }
 
@@ -99,12 +100,12 @@ namespace EY4Windows
                 {
                     // Make us as big as the the left over space, factoring in the ListBox width, the ListBox margins.
                     // and the LayoutRoot's margins
-                    InputSection.Width = availableWidth - (layoutRootMarginLeft + layoutRootMarginRight + listBoxMarginLeft + listBoxMarginRight);
+                   // InputSection.Width = availableWidth - (layoutRootMarginLeft + layoutRootMarginRight + listBoxMarginLeft + listBoxMarginRight);
                 }
                 else
                 {
                     // Make us as big as the left over space, factoring in just the LayoutRoot's margins.
-                    InputSection.Width = windowWidth - (layoutRootMarginLeft + layoutRootMarginRight);
+                    //InputSection.Width = windowWidth - (layoutRootMarginLeft + layoutRootMarginRight);
 
                 }
             }
@@ -115,25 +116,25 @@ namespace EY4Windows
         {
             if (this.ActualWidth < 768)
             {
-                Grid.SetRow(DescriptionText, 3);
-                Grid.SetColumn(DescriptionText, 0);
+                //Grid.SetRow(DescriptionText, 3);
+                //Grid.SetColumn(DescriptionText, 0);
 
-                Grid.SetRow(InputSection, 4);
-                Grid.SetColumn(InputSection, 0);
+                //Grid.SetRow(InputSection, 4);
+                //Grid.SetColumn(InputSection, 0);
             }
             else
             {
-                Grid.SetRow(DescriptionText, 1);
-                Grid.SetColumn(DescriptionText, 1);
+                //Grid.SetRow(DescriptionText, 1);
+                //Grid.SetColumn(DescriptionText, 1);
 
-                Grid.SetRow(InputSection, 2);
-                Grid.SetColumn(InputSection, 1);
+                //Grid.SetRow(InputSection, 2);
+                //Grid.SetColumn(InputSection, 1);
             }
 
             // Since we don't load the scenario page in the traditional manner (we just pluck out the
             // input and output sections from the page) we need to ensure that any VSM code used
             // by the scenario's input and output sections is fired.
-            VisualStateManager.GoToState((Control)InputSection, "Input" + DetermineVisualState(this.ActualWidth), false);
+            //VisualStateManager.GoToState((Control)InputSection, "Input" + DetermineVisualState(this.ActualWidth), false);
             VisualStateManager.GoToState((Control)OutputSection, "Output" + DetermineVisualState(this.ActualWidth), false);
         }
 
@@ -148,7 +149,8 @@ namespace EY4Windows
                 ListBoxItem item = new ListBoxItem();
                 s.Title = (++i).ToString() + ") " + s.Title;
                 item.Content = s;
-                item.Name = s.ClassType.FullName;
+                //tem.Content = s.ClassType.Name;
+                item.Name = s.ClassType.Name;
                 ScenarioList.Add(item);
             }
 
@@ -184,17 +186,17 @@ namespace EY4Windows
             Page hiddenPage = HiddenFrame.Content as Page;
 
             // Get each element.
-            UIElement input = hiddenPage.FindName("Input") as UIElement;
+            //UIElement input = hiddenPage.FindName("Input") as UIElement;
             UIElement output = hiddenPage.FindName("Output") as UIElement;
 
-            if (input == null)
-            {
-                // Malformed input section.
-                NotifyUser(String.Format(
-                    "Cannot load scenario input section for {0}.  Make sure root of input section markup has x:Name of 'Input'",
-                    scenarioClass.Name), NotifyType.ErrorMessage);
-                return;
-            }
+            //if (input == null)
+            //{
+            //    // Malformed input section.
+            //    NotifyUser(String.Format(
+            //        "Cannot load scenario input section for {0}.  Make sure root of input section markup has x:Name of 'Input'",
+            //        scenarioClass.Name), NotifyType.ErrorMessage);
+            //    return;
+            //}
 
             if (output == null)
             {
@@ -211,11 +213,11 @@ namespace EY4Windows
             if (panel != null)
             {
                 // Get rid of the content that is currently in the intput and output sections.
-                panel.Children.Remove(input);
+                //panel.Children.Remove(input);
                 panel.Children.Remove(output);
 
                 // Populate the input and output sections with the newly loaded content.
-                InputSection.Content = input;
+                //InputSection.Content = input;
                 OutputSection.Content = output;
             }
             else
@@ -254,24 +256,24 @@ namespace EY4Windows
             {
                 // Use the status message style.
                 case NotifyType.StatusMessage:
-                    StatusBlock.Style = Resources["StatusStyle"] as Style;
+                    //StatusBlock.Style = Resources["StatusStyle"] as Style;
                     break;
                 // Use the error message style.
                 case NotifyType.ErrorMessage:
-                    StatusBlock.Style = Resources["ErrorStyle"] as Style;
+                    //StatusBlock.Style = Resources["ErrorStyle"] as Style;
                     break;
             }
-            StatusBlock.Text = strMessage;
+            //StatusBlock.Text = strMessage;
 
             // Collapse the StatusBlock if it has no text to conserve real estate.
-            if (StatusBlock.Text != String.Empty)
-            {
-                StatusBlock.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            }
-            else
-            {
-                StatusBlock.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            }
+            //if (StatusBlock.Text != String.Empty)
+            //{
+            //    StatusBlock.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            //}
+            //else
+            //{
+            //    StatusBlock.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //}
         }
 
         async void Footer_Click(object sender, RoutedEventArgs e)
@@ -281,7 +283,7 @@ namespace EY4Windows
 
         private void SetFeatureName(string str)
         {
-            FeatureName.Text = str;
+            //FeatureName.Text = str;
         }
 
         private void cmdChildren_Click(object sender, RoutedEventArgs e)

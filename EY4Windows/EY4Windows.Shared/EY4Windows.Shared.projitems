@@ -63,6 +63,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\mediumtile-sdk.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\microsoft-sdk.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Paula.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\placeholder-sdk.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\smalltile-Phone-sdk.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\smalltile-Windows-sdk.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\smiley.png" />
@@ -72,5 +73,8 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\storelogo-sdk.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\tile-sdk.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\windows-sdk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)UserControls\" />
   </ItemGroup>
 </Project>

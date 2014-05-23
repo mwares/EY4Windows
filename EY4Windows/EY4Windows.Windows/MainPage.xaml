@@ -37,7 +37,7 @@
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
 
-        <Grid x:Name="ContentRoot" Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Margin="100,20,100,20">
+        <Grid x:Name="ContentRoot" Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Margin="50,20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -52,32 +52,23 @@
 				<StackPanel Grid.Column="0" Grid.RowSpan="3">
 					<TextBlock 
 						Margin="20"
-						Text="Playlists"
+						Text="Menu"
 						Style="{StaticResource SubheaderTextBlockStyle}" />
-					<ListView
-						Margin="20,0,0,0"
-						SelectionMode="Single"
-						SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}"
-						ItemsSource="{Binding Playlists}">
-						<ItemsControl.ItemTemplate>
-							<DataTemplate>
-								<StackPanel Orientation="Horizontal">
-									<Border Height="25" Width="25" Background="White" />
-									<TextBlock 
-										Margin="10,0,0,0" LineHeight="0" FontWeight="Light"
-										Text="{Binding Title, FallbackValue='Sample Playlist Title'}"
-										VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}" />
-								</StackPanel>
-							</DataTemplate>
-						</ItemsControl.ItemTemplate>
-						<x:String>Test</x:String>
-						<x:String>Test</x:String>
-						<x:String>Test</x:String>
-						<x:String>Test</x:String>
-						<x:String>Test</x:String>
-						<x:String>Test</x:String>
-						<x:String>Test</x:String>
-					</ListView>
+                    <ListBox x:Name="Scenarios" Margin="0,0,20,0" Grid.Row="2" AutomationProperties.Name="Scenarios" HorizontalAlignment="Left" 
+                             VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="125" Padding="0,0,27,0"
+						     SelectionMode="Single" AutomationProperties.LabeledBy="{Binding ElementName=ScenarioListLabel}" Background="SteelBlue">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                <Border Height="25" Width="25" Background="SteelBlue" />
+                                    <TextBlock 
+										    Margin="10,0,0,0" LineHeight="0" FontWeight="Light"
+										    Text=""
+										    VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}" />
+                                </StackPanel>
+                            </DataTemplate>
+                         </ItemsControl.ItemTemplate>
+                    </ListBox>
 				</StackPanel>
 
             <!-- Header -->
@@ -85,13 +76,13 @@
                 <Image x:Name="WindowsLogo" Stretch="None" Source="Assets/windows-sdk.png" AutomationProperties.Name="Windows Logo" HorizontalAlignment="Left" Grid.Column="0"/>
                 <TextBlock  Text="Softwares Solutions" VerticalAlignment="Bottom" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Grid.Column="1"/>
             </StackPanel>
+            
             <ScrollViewer x:Name="MainScrollViewer" Grid.Row="1"  Grid.Column="1" ZoomMode="Disabled" IsTabStop="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Padding="0,0,0,20" Margin="5,0" >
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock x:Name="FeatureName" Grid.Row="0"  Text="Add Sample Title Here" Style="{StaticResource HeaderTextStyle}" TextWrapping="Wrap"/>
 
                     <!-- Content -->
                     <Grid Grid.Row="1">
@@ -111,26 +102,10 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Row="0" Text="Input" Style="{StaticResource H2Style}"/>
-
-                            <TextBlock x:Name="ScenarioListLabel" Text="Select Scenario:" Grid.Row="1"  Style="{StaticResource SubheaderTextStyle}" Margin="0,5,0,0" />
-                            <ListBox x:Name="Scenarios" Margin="0,0,20,0" Grid.Row="2" AutomationProperties.Name="Scenarios" HorizontalAlignment="Left" 
-                                         VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                                         AutomationProperties.LabeledBy="{Binding ElementName=ScenarioListLabel}" MaxHeight="125" Padding="0,0,27,0">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding Name}"/>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-                            <TextBlock x:Name="DescriptionText" Margin="0,5,0,0" Text="Description:" Style="{StaticResource SubheaderTextStyle}" Grid.Row="1" Grid.Column="1"/>
 
                             <!-- Input Scenarios -->
-                            <UserControl x:Name="InputSection" Margin="0,5,0,0" IsTabStop="False" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
                             <!-- Output section -->
-                            <TextBlock Text="Output" Grid.Row="5"  Margin="0,25,0,20" Style="{StaticResource H2Style}" Grid.ColumnSpan="2"/>
-                            <TextBlock x:Name="StatusBlock" Grid.Row="6" Margin="0,0,0,5" Grid.ColumnSpan="2" Visibility="Collapsed"/>
 
                             <!-- Output Scenarios -->
                             <UserControl x:Name="OutputSection" Grid.Row="7" Grid.ColumnSpan="2" BorderThickness="0"/>

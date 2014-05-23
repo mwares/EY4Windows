@@ -20,7 +20,8 @@ namespace EY4Windows
         // The code in MainPage will take care of turning this into: "1) Navigating to a web page"
         List<Scenario> scenarios = new List<Scenario>
         {
-            new Scenario() { Title = "Video preview, record and take pictures", ClassType = typeof(BasicCapture) },
+            new Scenario() { Title = "Basic Capture", ClassType = typeof(BasicCapture) },
+            new Scenario() { Title = "Observations", ClassType = typeof(Observation)}
             //new Scenario() { Title = "Enumerate cameras and add a video effect", ClassType = typeof(AdvancedCapture) },
             //new Scenario() { Title = "Audio Capture", ClassType = typeof(AudioCapture) },
             //new Scenario() { Title = "Photo Sequence Capture", ClassType = typeof(PhotoSequence) }
